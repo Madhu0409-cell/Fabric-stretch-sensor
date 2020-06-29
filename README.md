@@ -26,7 +26,6 @@ First he could remain in relaxed position and observe the led attached for visua
 Then he can take a deep breath that would stretch the sensor 
 Now he can again visualize the LED attached that would blink brightly depicting change in breath pattern
 
-# Project Implementation
 # List of Materials:
 ## EeonTex Conductive fabric
 Conductive fabric is needed in this project as it offers the softness and malleability of fabric, while also having electrical properties.
@@ -55,3 +54,19 @@ As the main goal of the project revolves around building Fabric stretch sensor, 
 As the Fabric stretch sensor is planned to be attached to a belt that could be tied around waist, Iron-on adhesive is needed for easy and quick connection and for fixing on a surface of a belt particularly made of leather.
 ## 3D printed knitting spool machine
 knitting spool machine with needles could be immense help to knit a stretch sensor with the conductive yarns.As the circular knit but is very messy at the edges when it comes to trying to knit a flat piece. The machine could be used to knit a tube and include patches of conductive thread to create the knit
+
+# Project Implementation
+## Brightening LED circuit
+The main goal of the project is to make a basic circuit sewn with conductive thread that uses the knit stretch sensor to turn an LED light on and make it shine brighter, the more it is stretched.The main electronic principle behind this is to provide visual feedback based on the change in resistance. The sensing properties of the stitch are enabled by a conductive thread which increases its electric resistance as the fabric is stretched, due to the geometry of the stitches
+
+## Building of Fabric stretch sensor
+This sensor is knit from a stainless steel and polyester yarn blend. The stainless steel strands in the yarn are short and not continuous, so that stretching the yarn causes a decrease in electrical resistance as the individual conductive fibers make better contact among themselves.I am building my spool machine structure myself for the making of knitted stretch sensor.With the gathering of the material,Have began to started knitting with the help of handmade spool machine setup.Have combined the soft conductive yarn with the regular wool and began knitting the sensorEven without knitting the yarn into a structure you can use it as a stretch sensor by simply pulling it taught or relaxing it. Knitting the yarn into a narrow tube on a spool knitter makes the sensor stretchy and more robust. The knit structure also accumulates more yarn and thus more resistance in less length, giving you greater range.
+
+## Testing the intermediate layout 
+The knit structure allows you to accumulate more yarn and thus more resistance in less length and also by combining the conductive yarn with regular yarn you can gauge the sensitivity of the sensor by choosing a thicker or thinner yarn – thicker yarn gets more in the way of the conductive yarn making extra contact through the knitted loop structure. Plus knitting creates the stretchy structure giving you some natural tangible feedback. Multimeter could be used to test the intermediate result of the Fabric stretch sensors by measuring the resistance at stretched and relaxed position of the conductive fabric.
+
+## Building of the complete circuit with sewn LED's
+After the measurement of resistance at stretched and relaxed position,the intermediate results are noted.The complete circuit is produced with fabric stretch sensor and sewn led with appropriate connection made using copper tape and conducting thread. Then the complete circuit is placed on the 15/15 Frame for the user interaction
+
+## Work on the extended goal
+Once the primary goal of making fabric stretch sensor is completed successfully,my main research interest is to work on this textile circuit to track the biosignals and provide appropriate feedback.The fabric stretch sensor would be attached to belt around rib to measure the breathing rate of the user wearing it.
