@@ -1,1 +1,62 @@
+##Souce code for brightening LED's based on change in resistance
+int p1 = A0;          //this variable will hold a value based on the position of the knob
+int p2 = A1; 
+int p3 = A2;          //this variable will hold a value based on the position of the knob
+         //this variable will hold a value based on the position of the knob
+//int threshold = 700;            //if the photoresistor reading is lower than this value the light will turn on
+//LEDs are connected to these pins
+int RedPin = 9;
+int GreenPin = 10;
+int BluePin = 11;
+void setup() {
+  Serial.begin(9600);           //start a serial connection with the computer
+  //set the LED pins to output
+  pinMode(RedPin, OUTPUT);
+  pinMode(GreenPin, OUTPUT);
+  pinMode(BluePin, OUTPUT);
+}
 
+
+void red () {
+  //set the LED pins to values that make red
+  analogWrite(RedPin, 100);
+  analogWrite(GreenPin, 0);
+  analogWrite(BluePin, 0);
+}
+
+void green () {
+
+  //set the LED pins to values that make green
+  analogWrite(RedPin, 0);
+  analogWrite(GreenPin, 100);
+  analogWrite(BluePin, 0);
+}
+
+void blue () {
+
+  //set the LED pins to values that make blue
+  analogWrite(RedPin, 0);
+  analogWrite(GreenPin, 0);
+  analogWrite(BluePin, 100);
+}
+void loop() {
+  p1 = analogRead(A0);
+  p2 = analogRead(A1);
+  p3 = analogRead(A2);
+  int map_p1 = map(p1, 0, 1023, 0, 255);
+  int map_p2 = map(p2, 0, 1023, 0, 255);
+  int map_p3 = map(p3, 0, 1023, 0, 255);
+  Serial.print("  Potentiometer value p1:");
+  Serial.println(map_p1);          //print the potentiometer value to the serial monitor
+  Serial.print("  Potentiometer value p2:");
+  Serial.println(map_p2);          //print the potentiometer value to the serial monitor
+  Serial.print("  Potentiometer value p3:");
+  Serial.println(map_p3);          //print the potentiometer value to the serial monitor
+  
+  if (map_p1 == 255 && map_p2 == 0 && map_p3 ==0)
+    red();
+  if (map_p2 == 255 && map_p1 == 0 && map_p3 ==0)
+    green();
+  if (map_p3 == 255 && map_p2 == 0 && map_p1 ==0)
+    blue();   
+} 
